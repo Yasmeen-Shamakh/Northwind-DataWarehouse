@@ -11,7 +11,7 @@
 
 
 
-- **Data Warehouse design &Data Modeling**  <br />
+- **Data Warehouse Design &Data Modeling**  <br />
    - Employed denormalization techniques to enhance query performance and reduce the need for complex joins.
    - Designed and implemented a **Star Schema** model for efficient data warehousing.
  
