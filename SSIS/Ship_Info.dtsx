@@ -1,0 +1,2451 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/12/2023 4:54:27 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-MJLKCH6"
+  DTS:CreatorName="DESKTOP-MJLKCH6\CRIZMA MEGA STORE"
+  DTS:DTSID="{9771553B-3D28-46FF-8C67-CEA751123056}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="ShioInfo"
+  DTS:PackageType="5"
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{F31EE67A-7FC5-41A7-A8B5-8B1892031F27}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.dwh_test]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{601738C1-96E8-4596-A301-5A16083C61E6}"
+      DTS:ObjectName="LocalHost.dwh_test">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=dwh_test;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ShioInfo-{601738C1-96E8-4596-A301-5A16083C61E6}LocalHost.dwh_test;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.dwh_test 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{69AAD186-8956-4221-96B0-3F8D579365B6}"
+      DTS:ObjectName="LocalHost.dwh_test 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=dwh_test;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ShioInfo-{69AAD186-8956-4221-96B0-3F8D579365B6}LocalHost.dwh_test 1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.dwh_test 2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{106E9A07-A985-461C-94D9-A1135257778D}"
+      DTS:ObjectName="LocalHost.dwh_test 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=dwh_test;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-ShioInfo-{106E9A07-A985-461C-94D9-A1135257778D}LocalHost.dwh_test 2;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.Northwind_DWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D392F0C8-43E4-46F0-A622-884D5B92A57E}"
+      DTS:ObjectName="LocalHost.Northwind_DWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Northwind_DWH;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.Northwind_DWH 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{34F2EEFE-9BA3-436D-8DBC-D32C55A6A0B9}"
+      DTS:ObjectName="LocalHost.Northwind_DWH 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Northwind_DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{34F2EEFE-9BA3-436D-8DBC-D32C55A6A0B9}LocalHost.Northwind_DWH;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.Northwind_DWH 2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{FB0D14C9-AC83-4F6E-A838-F3226F47A4D9}"
+      DTS:ObjectName="LocalHost.Northwind_DWH 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Northwind_DWH;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.Northwind_DWH 3]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D4310742-47B4-4D95-BF4F-B0BFE660C1B4}"
+      DTS:ObjectName="LocalHost.Northwind_DWH 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Northwind_DWH;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.Northwind_DWH 4]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{556A6EE0-B414-4D5A-8A5C-549420F5F259}"
+      DTS:ObjectName="LocalHost.Northwind_DWH 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Northwind_DWH;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.Northwind_DWH 5]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4C2DE6C2-7C5A-4432-82E9-C4A9952A59E5}"
+      DTS:ObjectName="LocalHost.Northwind_DWH 5">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Northwind_DWH;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.NORTHWND]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4B5DF8B9-F745-4D19-9A76-B47F253ECD09}"
+      DTS:ObjectName="LocalHost.NORTHWND">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=NORTHWND;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.NORTHWND 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4882D83F-83A7-49C7-BA79-DCFA4CEB99F0}"
+      DTS:ObjectName="LocalHost.NORTHWND 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=NORTHWND;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{4882D83F-83A7-49C7-BA79-DCFA4CEB99F0}LocalHost.NORTHWND;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.NORTHWND 2]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{DC16289B-401F-4034-B5E6-F6B7ADEBB7C9}"
+      DTS:ObjectName="LocalHost.NORTHWND 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=NORTHWND;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.NORTHWND 3]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{7E976887-526D-428E-9307-346FB18592BC}"
+      DTS:ObjectName="LocalHost.NORTHWND 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=NORTHWND;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package2-{7E976887-526D-428E-9307-346FB18592BC}LocalHost.NORTHWND;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.NORTHWND 4]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{517037C9-DEF7-4037-824B-2EFD8B8C5E27}"
+      DTS:ObjectName="LocalHost.NORTHWND 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=NORTHWND;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.NORTHWND 5]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2F5164E6-3E44-40CF-A061-61862928610E}"
+      DTS:ObjectName="LocalHost.NORTHWND 5">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=NORTHWND;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task_ship info"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E370F799-CC9E-4A4A-BAA3-ABD4B3AAA221}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task_ship info"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task_ship info\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[CustomerID]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="CustomerID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[OrderID]"
+                      cachedDataType="i4"
+                      cachedName="OrderID"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[OrderID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[EmployeeID]"
+                      cachedDataType="i4"
+                      cachedName="EmployeeID"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[EmployeeID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[ShipAddress]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="ShipAddress"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ShipAddress]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[ShipCity]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="ShipCity"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ShipCity]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[ShipRegion]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="ShipRegion"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ShipRegion]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[ShipCountry]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="ShipCountry"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ShipCountry]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[Expr1]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Expr1"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Expr1]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[CompanyName]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="CompanyName"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[CompanyName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[ContactName]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="ContactName"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ContactName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[ContactTitle]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ContactTitle"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ContactTitle]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[Address]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="Address"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Address]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="City"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[City]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[Region]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Region"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="PostalCode"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[PostalCode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Country"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Country]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[Phone]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Phone"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Phone]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[Fax]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Fax"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Fax]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Right Input].Columns[customer_id]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="customer_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Task_ship info\Sort.Outputs[Sort Output].Columns[customer_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Right Input].Columns[customer_key]"
+                      cachedDataType="i4"
+                      cachedName="customer_key"
+                      lineageId="Package\Data Flow Task_ship info\Sort.Outputs[Sort Output].Columns[customer_key]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[customer_id]"
+                      codePage="1256"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[customer_id]"
+                      name="customer_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Right Input].Columns[customer_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[OrderID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[OrderID]"
+                      name="OrderID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[OrderID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[CustomerID]"
+                      codePage="1256"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[CustomerID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[EmployeeID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[EmployeeID]"
+                      name="EmployeeID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[EmployeeID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ShipAddress]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ShipAddress]"
+                      name="ShipAddress">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[ShipAddress]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ShipCity]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ShipCity]"
+                      name="ShipCity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[ShipCity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ShipRegion]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ShipRegion]"
+                      name="ShipRegion">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[ShipRegion]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ShipCountry]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ShipCountry]"
+                      name="ShipCountry">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[ShipCountry]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[Expr1]"
+                      codePage="1256"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[Expr1]"
+                      name="Expr1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[Expr1]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[CompanyName]"
+                      codePage="1256"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[CompanyName]"
+                      name="CompanyName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[CompanyName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ContactName]"
+                      codePage="1256"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ContactName]"
+                      name="ContactName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[ContactName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ContactTitle]"
+                      codePage="1256"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ContactTitle]"
+                      name="ContactTitle">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[ContactTitle]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[Address]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[Address]"
+                      name="Address">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[Address]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[City]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[City]"
+                      name="City">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[City]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[Region]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[Region]"
+                      name="Region">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[Region]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[PostalCode]"
+                      name="PostalCode">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[PostalCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[Country]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[Country]"
+                      name="Country">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[Country]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[Phone]"
+                      name="Phone">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[Phone]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[Fax]"
+                      name="Fax">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input].Columns[Fax]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[customer_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[customer_key]"
+                      name="customer_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Right Input].Columns[customer_key]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination_ShioInfo"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[ship_info]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.dwh_test 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.dwh_test 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].Columns[ShipAddress]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="ShipAddress"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].ExternalColumns[ship_address]"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ShipAddress]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].Columns[ShipCity]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="ShipCity"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].ExternalColumns[ship_city]"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ShipCity]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].Columns[ShipRegion]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="ShipRegion"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].ExternalColumns[ship_region]"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ShipRegion]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].Columns[ShipCountry]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="ShipCountry"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].ExternalColumns[ship_country]"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[ShipCountry]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].Columns[customer_key]"
+                      cachedDataType="i4"
+                      cachedName="customer_key"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].ExternalColumns[customer_key]"
+                      lineageId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output].Columns[customer_key]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].ExternalColumns[shipinfo_key]"
+                      dataType="i4"
+                      name="shipinfo_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].ExternalColumns[customer_key]"
+                      dataType="i4"
+                      name="customer_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].ExternalColumns[ship_address]"
+                      dataType="wstr"
+                      length="60"
+                      name="ship_address" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].ExternalColumns[ship_city]"
+                      dataType="wstr"
+                      length="15"
+                      name="ship_city" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].ExternalColumns[ship_region]"
+                      dataType="wstr"
+                      length="15"
+                      name="ship_region" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input].ExternalColumns[ship_country]"
+                      dataType="wstr"
+                      length="15"
+                      name="ship_country" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source_ CustomerDIM"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[customer_dim]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.dwh_test 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.dwh_test 2]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output].Columns[customer_id]"
+                      codePage="1256"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output].Columns[customer_id]"
+                      name="customer_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output].Columns[customer_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output].ExternalColumns[customer_key]"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output].Columns[customer_key]"
+                      name="customer_key"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output].ExternalColumns[customer_key]"
+                      dataType="i4"
+                      name="customer_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output].ExternalColumns[customer_id]"
+                      codePage="1256"
+                      dataType="str"
+                      length="10"
+                      name="customer_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output].ExternalColumns[company_name]"
+                      codePage="1256"
+                      dataType="str"
+                      length="40"
+                      name="company_name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output].ExternalColumns[contact_name]"
+                      codePage="1256"
+                      dataType="str"
+                      length="30"
+                      name="contact_name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output].ExternalColumns[contact_title]"
+                      codePage="1256"
+                      dataType="str"
+                      length="50"
+                      name="contact_title" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Error Output].Columns[customer_id]"
+                      codePage="1256"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Error Output].Columns[customer_id]"
+                      name="customer_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Error Output].Columns[customer_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Error Output].Columns[customer_key]"
+                      name="customer_key" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source_Customer&amp;Orders"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        o.OrderID, o.CustomerID, o.EmployeeID, o.ShipAddress, o.ShipCity, o.ShipRegion, o.ShipCountry, s.CustomerID AS Expr1, s.CompanyName, s.ContactName, s.ContactTitle, s.Address, s.City, s.Region, s.PostalCode, s.Country, 
+                         s.Phone, s.Fax
+FROM            dbo.Orders o, dbo.Customers s
+WHERE        o.CustomerID = s.CustomerID</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.NORTHWND]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.NORTHWND]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[CustomerID]"
+                      codePage="1256"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipAddress]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[ShipAddress]"
+                      length="60"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipAddress]"
+                      name="ShipAddress"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipCity]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[ShipCity]"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipCity]"
+                      name="ShipCity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipRegion]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[ShipRegion]"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipRegion]"
+                      name="ShipRegion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipCountry]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[ShipCountry]"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipCountry]"
+                      name="ShipCountry"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Region]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[Region]"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Region]"
+                      name="Region"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[PostalCode]"
+                      name="PostalCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Country]"
+                      name="Country"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Phone]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                      length="24"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Phone]"
+                      name="Phone"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Fax]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[Fax]"
+                      length="24"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Fax]"
+                      name="Fax"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[OrderID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[OrderID]"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[OrderID]"
+                      name="OrderID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[EmployeeID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[EmployeeID]"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[EmployeeID]"
+                      name="EmployeeID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Expr1]"
+                      codePage="1256"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[Expr1]"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Expr1]"
+                      name="Expr1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[CompanyName]"
+                      codePage="1256"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
+                      length="40"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[CompanyName]"
+                      name="CompanyName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ContactName]"
+                      codePage="1256"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[ContactName]"
+                      length="30"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ContactName]"
+                      name="ContactName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ContactTitle]"
+                      codePage="1256"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[ContactTitle]"
+                      length="50"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ContactTitle]"
+                      name="ContactTitle"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Address]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[Address]"
+                      length="60"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Address]"
+                      name="Address"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
+                      codePage="1256"
+                      dataType="str"
+                      length="10"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[ShipAddress]"
+                      dataType="wstr"
+                      length="60"
+                      name="ShipAddress" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[ShipCity]"
+                      dataType="wstr"
+                      length="15"
+                      name="ShipCity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[ShipRegion]"
+                      dataType="wstr"
+                      length="15"
+                      name="ShipRegion" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[ShipCountry]"
+                      dataType="wstr"
+                      length="15"
+                      name="ShipCountry" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="15"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[Region]"
+                      dataType="wstr"
+                      length="15"
+                      name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      name="PostalCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[Country]"
+                      dataType="wstr"
+                      length="15"
+                      name="Country" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      name="Fax" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[OrderID]"
+                      dataType="i4"
+                      name="OrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[EmployeeID]"
+                      dataType="i4"
+                      name="EmployeeID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[Expr1]"
+                      codePage="1256"
+                      dataType="str"
+                      length="10"
+                      name="Expr1" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[CompanyName]"
+                      codePage="1256"
+                      dataType="str"
+                      length="40"
+                      name="CompanyName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[ContactName]"
+                      codePage="1256"
+                      dataType="str"
+                      length="30"
+                      name="ContactName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[ContactTitle]"
+                      codePage="1256"
+                      dataType="str"
+                      length="50"
+                      name="ContactTitle" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].ExternalColumns[Address]"
+                      dataType="wstr"
+                      length="60"
+                      name="Address" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
+                      codePage="1256"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
+                      name="CustomerID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ShipAddress]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ShipAddress]"
+                      name="ShipAddress" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ShipCity]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ShipCity]"
+                      name="ShipCity" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ShipRegion]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ShipRegion]"
+                      name="ShipRegion" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ShipCountry]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ShipCountry]"
+                      name="ShipCountry" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[City]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[Region]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[Region]"
+                      name="Region" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[PostalCode]"
+                      name="PostalCode" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[Country]"
+                      name="Country" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[Phone]"
+                      name="Phone" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[Fax]"
+                      name="Fax" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[OrderID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[OrderID]"
+                      name="OrderID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[EmployeeID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[EmployeeID]"
+                      name="EmployeeID" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[Expr1]"
+                      codePage="1256"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[Expr1]"
+                      name="Expr1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
+                      codePage="1256"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[CompanyName]"
+                      name="CompanyName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ContactName]"
+                      codePage="1256"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ContactName]"
+                      name="ContactName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ContactTitle]"
+                      codePage="1256"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[ContactTitle]"
+                      name="ContactTitle" />
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[Address]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Error Output].Columns[Address]"
+                      name="Address" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task_ship info\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task_ship info\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort.Inputs[Sort Input].Columns[customer_id]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="customer_id"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output].Columns[customer_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort.Inputs[Sort Input].Columns[customer_key]"
+                      cachedDataType="i4"
+                      cachedName="customer_key"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output].Columns[customer_key]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task_ship info\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort.Outputs[Sort Output].Columns[customer_id]"
+                      codePage="1256"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\Sort.Outputs[Sort Output].Columns[customer_id]"
+                      name="customer_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output].Columns[customer_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort.Outputs[Sort Output].Columns[customer_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_ship info\Sort.Outputs[Sort Output].Columns[customer_key]"
+                      name="customer_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output].Columns[customer_key]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task_ship info\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[OrderID]"
+                      cachedDataType="i4"
+                      cachedName="OrderID"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[OrderID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[CustomerID]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="CustomerID"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[CustomerID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[EmployeeID]"
+                      cachedDataType="i4"
+                      cachedName="EmployeeID"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[EmployeeID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[ShipAddress]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="ShipAddress"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipAddress]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[ShipCity]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="ShipCity"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipCity]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[ShipRegion]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="ShipRegion"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipRegion]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[ShipCountry]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="ShipCountry"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipCountry]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[Expr1]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Expr1"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Expr1]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[CompanyName]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="40"
+                      cachedName="CompanyName"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[CompanyName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[ContactName]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="ContactName"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ContactName]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[ContactTitle]"
+                      cachedCodepage="1256"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ContactTitle"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ContactTitle]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[Address]"
+                      cachedDataType="wstr"
+                      cachedLength="60"
+                      cachedName="Address"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Address]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[City]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="City"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[City]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[Region]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Region"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Region]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[PostalCode]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="PostalCode"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[PostalCode]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[Country]"
+                      cachedDataType="wstr"
+                      cachedLength="15"
+                      cachedName="Country"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Country]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[Phone]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Phone"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Phone]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input].Columns[Fax]"
+                      cachedDataType="wstr"
+                      cachedLength="24"
+                      cachedName="Fax"
+                      lineageId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Fax]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[OrderID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[OrderID]"
+                      name="OrderID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[OrderID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[CustomerID]"
+                      codePage="1256"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[CustomerID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[EmployeeID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[EmployeeID]"
+                      name="EmployeeID">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[EmployeeID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ShipAddress]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ShipAddress]"
+                      name="ShipAddress">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipAddress]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ShipCity]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ShipCity]"
+                      name="ShipCity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipCity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ShipRegion]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ShipRegion]"
+                      name="ShipRegion">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipRegion]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ShipCountry]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ShipCountry]"
+                      name="ShipCountry">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ShipCountry]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Expr1]"
+                      codePage="1256"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Expr1]"
+                      name="Expr1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Expr1]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[CompanyName]"
+                      codePage="1256"
+                      dataType="str"
+                      length="40"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[CompanyName]"
+                      name="CompanyName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[CompanyName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ContactName]"
+                      codePage="1256"
+                      dataType="str"
+                      length="30"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ContactName]"
+                      name="ContactName">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ContactName]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ContactTitle]"
+                      codePage="1256"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[ContactTitle]"
+                      name="ContactTitle">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[ContactTitle]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Address]"
+                      dataType="wstr"
+                      length="60"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Address]"
+                      name="Address">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Address]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[City]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[City]"
+                      name="City">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[City]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Region]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Region]"
+                      name="Region">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Region]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[PostalCode]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[PostalCode]"
+                      name="PostalCode">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[PostalCode]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Country]"
+                      dataType="wstr"
+                      length="15"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Country]"
+                      name="Country">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Country]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Phone]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Phone]"
+                      name="Phone">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Phone]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Fax]"
+                      dataType="wstr"
+                      length="24"
+                      lineageId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output].Columns[Fax]"
+                      name="Fax">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output].Columns[Fax]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task_ship info.Paths[Merge Join Output]"
+              endId="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo.Inputs[OLE DB Destination Input]"
+              name="Merge Join Output"
+              startId="Package\Data Flow Task_ship info\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Data Flow Task_ship info.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task_ship info\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task_ship info.Paths[OLE DB Source Output1]"
+              endId="Package\Data Flow Task_ship info\Sort 1.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Task_ship info.Paths[Sort Output]"
+              endId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task_ship info\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Task_ship info.Paths[Sort Output1]"
+              endId="Package\Data Flow Task_ship info\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Task_ship info\Sort 1.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="197,42"
+          Id="Package\Data Flow Task_ship info"
+          TopLeft="253.5,123.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task_ship info">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Data Flow Task_ship info\Merge Join"
+          TopLeft="339,160" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Data Flow Task_ship info\Sort 1"
+          TopLeft="117,117" />
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM"
+          TopLeft="574,14" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Data Flow Task_ship info\Sort"
+          TopLeft="571,130" />
+        <NodeLayout
+          Size="239,42"
+          Id="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders"
+          TopLeft="66,9" />
+        <NodeLayout
+          Size="216,42"
+          Id="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo"
+          TopLeft="303,254" />
+        <EdgeLayout
+          Id="Package\Data Flow Task_ship info.Paths[Sort Output1]"
+          TopLeft="224,138">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="115,43"
+              Start="0,0"
+              End="107.5,43">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="53.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="53.5,0"
+                    Point2="57.5,0"
+                    Point3="57.5,4" />
+                  <mssgle:LineSegment
+                    End="57.5,39" />
+                  <mssgle:CubicBezierSegment
+                    Point1="57.5,39"
+                    Point2="57.5,43"
+                    Point3="61.5,43" />
+                  <mssgle:LineSegment
+                    End="107.5,43" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_ship info.Paths[Sort Output]"
+          TopLeft="571,151">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-102,30"
+              Start="0,0"
+              End="-94.5,30">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-47,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-47,0"
+                    Point2="-51,0"
+                    Point3="-51,4" />
+                  <mssgle:LineSegment
+                    End="-51,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-51,26"
+                    Point2="-51,30"
+                    Point3="-55,30" />
+                  <mssgle:LineSegment
+                    End="-94.5,30" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_ship info.Paths[OLE DB Source Output1]"
+          TopLeft="185.5,51">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-15,66"
+              Start="0,0"
+              End="-15,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29"
+                    Point2="0,33"
+                    Point3="-4,33" />
+                  <mssgle:LineSegment
+                    End="-11,33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-11,33"
+                    Point2="-15,33"
+                    Point3="-15,37" />
+                  <mssgle:LineSegment
+                    End="-15,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_ship info.Paths[OLE DB Source Output]"
+          TopLeft="686,56">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-66,74"
+              Start="0,0"
+              End="-66,66.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33"
+                    Point2="0,37"
+                    Point3="-4,37" />
+                  <mssgle:LineSegment
+                    End="-62,37" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-62,37"
+                    Point2="-66,37"
+                    Point3="-66,41" />
+                  <mssgle:LineSegment
+                    End="-66,66.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task_ship info.Paths[Merge Join Output]"
+          TopLeft="407.5,202">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_ship info\OLE DB Source_ CustomerDIM">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_ship info\OLE DB Source_Customer&amp;Orders">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task_ship info\OLE DB Destination_ShioInfo">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

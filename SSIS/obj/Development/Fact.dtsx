@@ -1,0 +1,2735 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/13/2023 6:54:01 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-MJLKCH6"
+  DTS:CreatorName="DESKTOP-MJLKCH6\CRIZMA MEGA STORE"
+  DTS:DTSID="{03180CC7-A45B-47DA-B51A-67F3B14D9715}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package6"
+  DTS:PackageType="5"
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{F34A81A6-106C-47E3-9B99-BA9DCD23E235}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.dwh_test]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{228F2676-144E-402E-BAD4-F480FA30FFF8}"
+      DTS:ObjectName="LocalHost.dwh_test">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=dwh_test;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package6-{228F2676-144E-402E-BAD4-F480FA30FFF8}LocalHost.dwh_test;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.dwh_test 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{D1D3EFEE-4D00-4B1E-9BAA-7FF48BDADD0B}"
+      DTS:ObjectName="LocalHost.dwh_test 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=dwh_test;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.northwind]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F8866919-FA48-4AEF-BE8A-0C83E5A514F4}"
+      DTS:ObjectName="LocalHost.northwind">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=northwind;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package6-{F8866919-FA48-4AEF-BE8A-0C83E5A514F4}LocalHost.northwind;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.Northwind_DWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{487AFA45-9FE8-4B2F-8113-456E177E63B3}"
+      DTS:ObjectName="LocalHost.Northwind_DWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Northwind_DWH;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.NORTHWND]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{95CE6ADC-3EE5-4DF8-8868-02AE2E60CCAE}"
+      DTS:ObjectName="LocalHost.NORTHWND">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=NORTHWND;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Fact_Table"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{068A15E1-1C60-4F85-AD37-1E5B5B7FA715}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Fact_Table"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Fact_Table\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Fact_Table\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Inputs[Derived Column Input].Columns[Freight]"
+                      cachedDataType="cy"
+                      cachedName="Freight"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Freight]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Inputs[Derived Column Input].Columns[UnitPrice]"
+                      cachedDataType="cy"
+                      cachedName="UnitPrice"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[UnitPrice]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Inputs[Derived Column Input].Columns[Quantity]"
+                      cachedDataType="i2"
+                      cachedName="Quantity"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Quantity]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Inputs[Derived Column Input].Columns[Discount]"
+                      cachedDataType="r4"
+                      cachedName="Discount"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Discount]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Inputs[Derived Column Input].Columns[OrderDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="OrderDate"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[OrderDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Inputs[Derived Column Input].Columns[ShippedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ShippedDate"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[ShippedDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Inputs[Derived Column Input].Columns[RequiredDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="RequiredDate"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[RequiredDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Fact_Table\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[cost]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[cost]"
+                      name="cost"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">((#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Quantity]} * #{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[UnitPrice]}) - #{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Discount]}) + #{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Freight]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">((Quantity * UnitPrice) - Discount) + Freight</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[OrderDate_date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[OrderDate_date]"
+                      name="OrderDate_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DATE)#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[OrderDate]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DATE)OrderDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[ShippedDate_date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[ShippedDate_date]"
+                      name="ShippedDate_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DATE)#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[ShippedDate]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DATE)ShippedDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[RequiredDate_date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[RequiredDate_date]"
+                      name="RequiredDate_date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DATE)#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[RequiredDate]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DATE)RequiredDate</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[orderDate_Key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[orderDate_Key]"
+                      name="orderDate_Key"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)[YEAR](#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[OrderDate]}) * 10000 + (DT_I4)[MONTH](#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[OrderDate]}) * 100 + (DT_I4)[DAY](#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[OrderDate]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)YEAR(OrderDate) * 10000 + (DT_I4)MONTH(OrderDate) * 100 + (DT_I4)DAY(OrderDate)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[shipped_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[shipped_key]"
+                      name="shipped_key"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)[YEAR](#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[ShippedDate]}) * 10000 + (DT_I4)[MONTH](#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[ShippedDate]}) * 100 + (DT_I4)[DAY](#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[ShippedDate]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)YEAR(ShippedDate) * 10000 + (DT_I4)MONTH(ShippedDate) * 100 + (DT_I4)DAY(ShippedDate)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[Required_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[Required_key]"
+                      name="Required_key"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)[YEAR](#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[RequiredDate]}) * 10000 + (DT_I4)[MONTH](#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[RequiredDate]}) * 100 + (DT_I4)[DAY](#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[RequiredDate]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)YEAR(RequiredDate) * 10000 + (DT_I4)MONTH(RequiredDate) * 100 + (DT_I4)DAY(RequiredDate)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Fact_Table\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Fact_Table\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[OrderID]"
+                      cachedDataType="i4"
+                      cachedName="OrderID"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[OrderID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[OrderDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="OrderDate"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[OrderDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[ShippedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ShippedDate"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[ShippedDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[RequiredDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="RequiredDate"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[RequiredDate]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[Freight]"
+                      cachedDataType="cy"
+                      cachedName="Freight"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[Freight]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[UnitPrice]"
+                      cachedDataType="cy"
+                      cachedName="UnitPrice"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[UnitPrice]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[Quantity]"
+                      cachedDataType="i2"
+                      cachedName="Quantity"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[Quantity]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[Discount]"
+                      cachedDataType="r4"
+                      cachedName="Discount"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[Discount]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[cost]"
+                      cachedDataType="r4"
+                      cachedName="cost"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[cost]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[OrderDate_Converted]"
+                      cachedDataType="date"
+                      cachedName="OrderDate_Converted"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[OrderDate_Converted]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[ShippedDate_Converted]"
+                      cachedDataType="date"
+                      cachedName="ShippedDate_Converted"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[ShippedDate_Converted]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[RequiredDate_Converted]"
+                      cachedDataType="date"
+                      cachedName="RequiredDate_Converted"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[RequiredDate_Converted]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[orderDate_Key]"
+                      cachedDataType="i4"
+                      cachedName="orderDate_Key"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[orderDate_Key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[shipped_key]"
+                      cachedDataType="i4"
+                      cachedName="shipped_key"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[shipped_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[Required_key]"
+                      cachedDataType="i4"
+                      cachedName="Required_key"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[Required_key]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[order_id]"
+                      cachedDataType="i4"
+                      cachedName="order_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[order_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[employee_key]"
+                      cachedDataType="i4"
+                      cachedName="employee_key"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[employee_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[shipper_key]"
+                      cachedDataType="i4"
+                      cachedName="shipper_key"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[shipper_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[customer_key]"
+                      cachedDataType="i4"
+                      cachedName="customer_key"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[customer_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[supplier_key]"
+                      cachedDataType="i4"
+                      cachedName="supplier_key"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[supplier_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[product_key]"
+                      cachedDataType="i4"
+                      cachedName="product_key"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[product_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[shipinfo_key]"
+                      cachedDataType="i4"
+                      cachedName="shipinfo_key"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[shipinfo_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[order_date_key]"
+                      cachedDataType="i4"
+                      cachedName="order_date_key"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[order_date_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[required_date_key]"
+                      cachedDataType="i4"
+                      cachedName="required_date_key"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[required_date_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[shipped_date_key]"
+                      cachedDataType="i4"
+                      cachedName="shipped_date_key"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[shipped_date_key]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[OrderID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[OrderID]"
+                      name="OrderID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[OrderID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate]"
+                      name="OrderDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[OrderDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[ShippedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[ShippedDate]"
+                      name="ShippedDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[ShippedDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[RequiredDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[RequiredDate]"
+                      name="RequiredDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[RequiredDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[Freight]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[Freight]"
+                      name="Freight">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[Freight]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[UnitPrice]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[UnitPrice]"
+                      name="UnitPrice">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[UnitPrice]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[Quantity]"
+                      dataType="i2"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[Quantity]"
+                      name="Quantity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[Quantity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[Discount]"
+                      dataType="r4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[Discount]"
+                      name="Discount">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[Discount]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[cost]"
+                      dataType="r4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[cost]"
+                      name="cost">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[cost]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate_Converted]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate_Converted]"
+                      name="OrderDate_Converted">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[OrderDate_Converted]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[ShippedDate_Converted]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[ShippedDate_Converted]"
+                      name="ShippedDate_Converted">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[ShippedDate_Converted]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[RequiredDate_Converted]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[RequiredDate_Converted]"
+                      name="RequiredDate_Converted">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[RequiredDate_Converted]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[order_id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[order_id]"
+                      name="order_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[order_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[employee_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[employee_key]"
+                      name="employee_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[employee_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[shipper_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[shipper_key]"
+                      name="shipper_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[shipper_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[customer_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[customer_key]"
+                      name="customer_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[customer_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[supplier_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[supplier_key]"
+                      name="supplier_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[supplier_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[product_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[product_key]"
+                      name="product_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[product_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[shipinfo_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[shipinfo_key]"
+                      name="shipinfo_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[shipinfo_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[order_date_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[order_date_key]"
+                      name="order_date_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[order_date_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[required_date_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[required_date_key]"
+                      name="required_date_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[required_date_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[shipped_date_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[shipped_date_key]"
+                      name="shipped_date_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input].Columns[shipped_date_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[orderDate_Key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[orderDate_Key]"
+                      name="orderDate_Key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[orderDate_Key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[shipped_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[shipped_key]"
+                      name="shipped_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[shipped_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[Required_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[Required_key]"
+                      name="Required_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input].Columns[Required_key]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Fact_Table\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[orders_fact]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Fact_Table\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.dwh_test 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.dwh_test 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Freight]"
+                      cachedDataType="cy"
+                      cachedName="Freight"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[freight]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[Freight]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Quantity]"
+                      cachedDataType="i2"
+                      cachedName="Quantity"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[quantity]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[Quantity]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Discount]"
+                      cachedDataType="r4"
+                      cachedName="Discount"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[discount]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[Discount]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[order_id]"
+                      cachedDataType="i4"
+                      cachedName="order_id"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[order_id]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[order_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[employee_key]"
+                      cachedDataType="i4"
+                      cachedName="employee_key"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[employee_key]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[employee_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[shipper_key]"
+                      cachedDataType="i4"
+                      cachedName="shipper_key"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[shipper_key]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[shipper_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[customer_key]"
+                      cachedDataType="i4"
+                      cachedName="customer_key"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_key]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[customer_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[supplier_key]"
+                      cachedDataType="i4"
+                      cachedName="supplier_key"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[supplier_key]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[supplier_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[product_key]"
+                      cachedDataType="i4"
+                      cachedName="product_key"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[product_key]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[product_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[shipinfo_key]"
+                      cachedDataType="i4"
+                      cachedName="shipinfo_key"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[shipinfo_key]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[shipinfo_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OrderDate_Converted]"
+                      cachedDataType="date"
+                      cachedName="OrderDate_Converted"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[order_date]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[OrderDate_Converted]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[RequiredDate_Converted]"
+                      cachedDataType="date"
+                      cachedName="RequiredDate_Converted"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[required_date]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[RequiredDate_Converted]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ShippedDate_Converted]"
+                      cachedDataType="date"
+                      cachedName="ShippedDate_Converted"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[shipped_date]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[ShippedDate_Converted]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UnitPrice]"
+                      cachedDataType="cy"
+                      cachedName="UnitPrice"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[unit_price]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[UnitPrice]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[cost]"
+                      cachedDataType="r4"
+                      cachedName="cost"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[actual_cost]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[cost]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[orderDate_Key]"
+                      cachedDataType="i4"
+                      cachedName="orderDate_Key"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[order_date_key]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[orderDate_Key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Required_key]"
+                      cachedDataType="i4"
+                      cachedName="Required_key"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[required_date_key]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[Required_key]" />
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[shipped_key]"
+                      cachedDataType="i4"
+                      cachedName="shipped_key"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[shipped_date_key]"
+                      lineageId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output].Columns[shipped_key]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[order_key]"
+                      dataType="i4"
+                      name="order_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[order_id]"
+                      dataType="i4"
+                      name="order_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[employee_key]"
+                      dataType="i4"
+                      name="employee_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[shipper_key]"
+                      dataType="i4"
+                      name="shipper_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_key]"
+                      dataType="i4"
+                      name="customer_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[supplier_key]"
+                      dataType="i4"
+                      name="supplier_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[product_key]"
+                      dataType="i4"
+                      name="product_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[shipinfo_key]"
+                      dataType="i4"
+                      name="shipinfo_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[order_date_key]"
+                      dataType="i4"
+                      name="order_date_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[required_date_key]"
+                      dataType="i4"
+                      name="required_date_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[shipped_date_key]"
+                      dataType="i4"
+                      name="shipped_date_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[order_date]"
+                      dataType="dbDate"
+                      name="order_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[required_date]"
+                      dataType="dbDate"
+                      name="required_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[shipped_date]"
+                      dataType="dbDate"
+                      name="shipped_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[freight]"
+                      dataType="r4"
+                      name="freight" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[unit_price]"
+                      dataType="r4"
+                      name="unit_price" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[quantity]"
+                      dataType="i4"
+                      name="quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[discount]"
+                      dataType="r4"
+                      name="discount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[actual_cost]"
+                      dataType="r4"
+                      name="actual_cost" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Fact_Table\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Fact_Table\OLE DB OLAP"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB OLAP"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        O.order_id, O.employee_key, O.shipper_key, O.customer_key, O.supplier_key, O.product_key, O.shipinfo_key, O.order_date_key, O.required_date_key, O.shipped_date_key
+FROM            dbo.orders_fact O, dbo.employee_dim Emp, dbo.supplier_dim sup, dbo.customer_dim Cus, dbo.ship_info Sh_info, dbo.shipper_dim Ship, dbo.product_dim p, dbo.date_dim d
+WHERE        Emp.employee_key = O.employee_key AND sup.supplier_key = O.supplier_key AND Cus.customer_key = O.customer_key AND Sh_info.shipinfo_key = O.shipinfo_key AND Ship.shipper_key = O.shipper_key AND 
+                         p.product_key = O.product_key AND d.date_key = O.order_date_key</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Fact_Table\OLE DB OLAP.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.dwh_test 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.dwh_test 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[order_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[order_id]"
+                      name="order_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[employee_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[employee_key]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[employee_key]"
+                      name="employee_key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[shipper_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[shipper_key]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[shipper_key]"
+                      name="shipper_key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[customer_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[customer_key]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[customer_key]"
+                      name="customer_key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[supplier_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[supplier_key]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[supplier_key]"
+                      name="supplier_key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[product_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[product_key]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[product_key]"
+                      name="product_key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[shipinfo_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[shipinfo_key]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[shipinfo_key]"
+                      name="shipinfo_key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[order_date_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[order_date_key]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[order_date_key]"
+                      name="order_date_key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[required_date_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[required_date_key]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[required_date_key]"
+                      name="required_date_key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[shipped_date_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[shipped_date_key]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[shipped_date_key]"
+                      name="shipped_date_key"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[order_id]"
+                      dataType="i4"
+                      name="order_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[employee_key]"
+                      dataType="i4"
+                      name="employee_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[shipper_key]"
+                      dataType="i4"
+                      name="shipper_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[customer_key]"
+                      dataType="i4"
+                      name="customer_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[supplier_key]"
+                      dataType="i4"
+                      name="supplier_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[product_key]"
+                      dataType="i4"
+                      name="product_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[shipinfo_key]"
+                      dataType="i4"
+                      name="shipinfo_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[order_date_key]"
+                      dataType="i4"
+                      name="order_date_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[required_date_key]"
+                      dataType="i4"
+                      name="required_date_key" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].ExternalColumns[shipped_date_key]"
+                      dataType="i4"
+                      name="shipped_date_key" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[order_id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[order_id]"
+                      name="order_id" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[employee_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[employee_key]"
+                      name="employee_key" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[shipper_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[shipper_key]"
+                      name="shipper_key" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[customer_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[customer_key]"
+                      name="customer_key" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[supplier_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[supplier_key]"
+                      name="supplier_key" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[product_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[product_key]"
+                      name="product_key" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[shipinfo_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[shipinfo_key]"
+                      name="shipinfo_key" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[order_date_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[order_date_key]"
+                      name="order_date_key" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[required_date_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[required_date_key]"
+                      name="required_date_key" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[shipped_date_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[shipped_date_key]"
+                      name="shipped_date_key" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Fact_Table\OLE DB OLTP"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB OLTP"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        o.OrderID, o.OrderDate, o.ShippedDate, o.RequiredDate, o.Freight, os.UnitPrice, os.Quantity, os.Discount
+FROM            dbo.Orders o, dbo.Order_Details os
+WHERE        o.OrderID = os.OrderID</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Fact_Table\OLE DB OLTP.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.NORTHWND]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.NORTHWND]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[OrderID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[OrderID]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[OrderID]"
+                      name="OrderID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[OrderDate]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[OrderDate]"
+                      name="OrderDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[ShippedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[ShippedDate]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[ShippedDate]"
+                      name="ShippedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[RequiredDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[RequiredDate]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[RequiredDate]"
+                      name="RequiredDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Freight]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[Freight]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Freight]"
+                      name="Freight"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[UnitPrice]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[UnitPrice]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[UnitPrice]"
+                      name="UnitPrice"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Quantity]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[Quantity]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Quantity]"
+                      name="Quantity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Discount]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[Discount]"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Discount]"
+                      name="Discount"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[OrderID]"
+                      dataType="i4"
+                      name="OrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      name="OrderDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[ShippedDate]"
+                      dataType="dbTimeStamp"
+                      name="ShippedDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[RequiredDate]"
+                      dataType="dbTimeStamp"
+                      name="RequiredDate" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[Freight]"
+                      dataType="cy"
+                      name="Freight" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[UnitPrice]"
+                      dataType="cy"
+                      name="UnitPrice" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[Quantity]"
+                      dataType="i2"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].ExternalColumns[Discount]"
+                      dataType="r4"
+                      name="Discount" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[OrderID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[OrderID]"
+                      name="OrderID" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[OrderDate]"
+                      name="OrderDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[ShippedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[ShippedDate]"
+                      name="ShippedDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[RequiredDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[RequiredDate]"
+                      name="RequiredDate" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[Freight]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[Freight]"
+                      name="Freight" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[UnitPrice]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[UnitPrice]"
+                      name="UnitPrice" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[Quantity]"
+                      dataType="i2"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[Quantity]"
+                      name="Quantity" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[Discount]"
+                      dataType="r4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[Discount]"
+                      name="Discount" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Fact_Table\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Fact_Table\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Inputs[Sort Input].Columns[order_id]"
+                      cachedDataType="i4"
+                      cachedName="order_id"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[order_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Inputs[Sort Input].Columns[employee_key]"
+                      cachedDataType="i4"
+                      cachedName="employee_key"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[employee_key]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Inputs[Sort Input].Columns[shipper_key]"
+                      cachedDataType="i4"
+                      cachedName="shipper_key"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[shipper_key]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Inputs[Sort Input].Columns[customer_key]"
+                      cachedDataType="i4"
+                      cachedName="customer_key"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[customer_key]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Inputs[Sort Input].Columns[supplier_key]"
+                      cachedDataType="i4"
+                      cachedName="supplier_key"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[supplier_key]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Inputs[Sort Input].Columns[product_key]"
+                      cachedDataType="i4"
+                      cachedName="product_key"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[product_key]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Inputs[Sort Input].Columns[shipinfo_key]"
+                      cachedDataType="i4"
+                      cachedName="shipinfo_key"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[shipinfo_key]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Inputs[Sort Input].Columns[order_date_key]"
+                      cachedDataType="i4"
+                      cachedName="order_date_key"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[order_date_key]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Inputs[Sort Input].Columns[required_date_key]"
+                      cachedDataType="i4"
+                      cachedName="required_date_key"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[required_date_key]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Inputs[Sort Input].Columns[shipped_date_key]"
+                      cachedDataType="i4"
+                      cachedName="shipped_date_key"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[shipped_date_key]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[order_id]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[order_id]"
+                      name="order_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[order_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[employee_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[employee_key]"
+                      name="employee_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[employee_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[shipper_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[shipper_key]"
+                      name="shipper_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[shipper_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[customer_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[customer_key]"
+                      name="customer_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[customer_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[supplier_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[supplier_key]"
+                      name="supplier_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[supplier_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[product_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[product_key]"
+                      name="product_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[product_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[shipinfo_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[shipinfo_key]"
+                      name="shipinfo_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[shipinfo_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[order_date_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[order_date_key]"
+                      name="order_date_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[order_date_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[required_date_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[required_date_key]"
+                      name="required_date_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[required_date_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[shipped_date_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output].Columns[shipped_date_key]"
+                      name="shipped_date_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output].Columns[shipped_date_key]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Fact_Table\Sort 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input].Columns[OrderID]"
+                      cachedDataType="i4"
+                      cachedName="OrderID"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[OrderID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input].Columns[OrderDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="OrderDate"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[OrderDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input].Columns[ShippedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ShippedDate"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[ShippedDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input].Columns[RequiredDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="RequiredDate"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[RequiredDate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input].Columns[Freight]"
+                      cachedDataType="cy"
+                      cachedName="Freight"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Freight]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input].Columns[UnitPrice]"
+                      cachedDataType="cy"
+                      cachedName="UnitPrice"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[UnitPrice]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input].Columns[Quantity]"
+                      cachedDataType="i2"
+                      cachedName="Quantity"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Quantity]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input].Columns[Discount]"
+                      cachedDataType="r4"
+                      cachedName="Discount"
+                      lineageId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Discount]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input].Columns[cost]"
+                      cachedDataType="r4"
+                      cachedName="cost"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[cost]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input].Columns[OrderDate_date]"
+                      cachedDataType="date"
+                      cachedName="OrderDate_date"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[OrderDate_date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input].Columns[ShippedDate_date]"
+                      cachedDataType="date"
+                      cachedName="ShippedDate_date"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[ShippedDate_date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input].Columns[RequiredDate_date]"
+                      cachedDataType="date"
+                      cachedName="RequiredDate_date"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[RequiredDate_date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input].Columns[orderDate_Key]"
+                      cachedDataType="i4"
+                      cachedName="orderDate_Key"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[orderDate_Key]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input].Columns[shipped_key]"
+                      cachedDataType="i4"
+                      cachedName="shipped_key"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[shipped_key]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input].Columns[Required_key]"
+                      cachedDataType="i4"
+                      cachedName="Required_key"
+                      lineageId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[Required_key]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[OrderID]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[OrderID]"
+                      name="OrderID"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[OrderID]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[OrderDate]"
+                      name="OrderDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[OrderDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[ShippedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[ShippedDate]"
+                      name="ShippedDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[ShippedDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[RequiredDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[RequiredDate]"
+                      name="RequiredDate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[RequiredDate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[Freight]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[Freight]"
+                      name="Freight">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Freight]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[UnitPrice]"
+                      dataType="cy"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[UnitPrice]"
+                      name="UnitPrice">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[UnitPrice]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[Quantity]"
+                      dataType="i2"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[Quantity]"
+                      name="Quantity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Quantity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[Discount]"
+                      dataType="r4"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[Discount]"
+                      name="Discount">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output].Columns[Discount]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[cost]"
+                      dataType="r4"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[cost]"
+                      name="cost">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[cost]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[OrderDate_Converted]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[OrderDate_Converted]"
+                      name="OrderDate_Converted">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[OrderDate_date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[ShippedDate_Converted]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[ShippedDate_Converted]"
+                      name="ShippedDate_Converted">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[ShippedDate_date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[RequiredDate_Converted]"
+                      dataType="date"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[RequiredDate_Converted]"
+                      name="RequiredDate_Converted">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[RequiredDate_date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[orderDate_Key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[orderDate_Key]"
+                      name="orderDate_Key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[orderDate_Key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[shipped_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[shipped_key]"
+                      name="shipped_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[shipped_key]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[Required_key]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output].Columns[Required_key]"
+                      name="Required_key">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output].Columns[Required_key]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Fact_Table.Paths[Derived Column Output]"
+              endId="Package\Data Flow Fact_Table\Sort 1.Inputs[Sort Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Fact_Table\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Fact_Table.Paths[Merge Join Output]"
+              endId="Package\Data Flow Fact_Table\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Merge Join Output"
+              startId="Package\Data Flow Fact_Table\Merge Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Data Flow Fact_Table.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Fact_Table\Derived Column.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Fact_Table\OLE DB OLTP.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Fact_Table.Paths[OLE DB Source Output1]"
+              endId="Package\Data Flow Fact_Table\Sort.Inputs[Sort Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Fact_Table\OLE DB OLAP.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Data Flow Fact_Table.Paths[Sort Output]"
+              endId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Fact_Table\Sort.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Fact_Table.Paths[Sort Output1]"
+              endId="Package\Data Flow Fact_Table\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Fact_Table\Sort 1.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Data Flow Fact_Table"
+          TopLeft="297,103" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Fact_Table">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Fact_Table\OLE DB Destination"
+          TopLeft="368,223" />
+        <NodeLayout
+          Size="98,42"
+          Id="Package\Data Flow Fact_Table\Sort"
+          TopLeft="640,139" />
+        <NodeLayout
+          Size="143,43"
+          Id="Package\Data Flow Fact_Table\OLE DB OLTP"
+          TopLeft="113,2" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Data Flow Fact_Table\OLE DB OLAP"
+          TopLeft="614,21" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Data Flow Fact_Table\Derived Column"
+          TopLeft="105,82" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Data Flow Fact_Table\Merge Join"
+          TopLeft="368,141" />
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Data Flow Fact_Table\Sort 1"
+          TopLeft="103,192" />
+        <EdgeLayout
+          Id="Package\Data Flow Fact_Table.Paths[Sort Output]"
+          TopLeft="640,161">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-142,0"
+              Start="0,0"
+              End="-134.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-134.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Fact_Table.Paths[OLE DB Source Output1]"
+          TopLeft="687.25,63">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76"
+              Start="0,0"
+              End="0,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Fact_Table.Paths[OLE DB Source Output]"
+          TopLeft="183.25,45">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37"
+              Start="0,0"
+              End="0,29.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,6.75,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Fact_Table.Paths[Derived Column Output]"
+          TopLeft="182,124">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-25.5,68"
+              Start="0,0"
+              End="-25.5,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="-4,34" />
+                  <mssgle:LineSegment
+                    End="-21.5,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-21.5,34"
+                    Point2="-25.5,34"
+                    Point3="-25.5,38" />
+                  <mssgle:LineSegment
+                    End="-25.5,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-20.75,39,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Fact_Table.Paths[Sort Output1]"
+          TopLeft="210,213">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="158,-51"
+              Start="0,0"
+              End="150.5,-51">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="75,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="75,0"
+                    Point2="79,0"
+                    Point3="79,-4" />
+                  <mssgle:LineSegment
+                    End="79,-47" />
+                  <mssgle:CubicBezierSegment
+                    Point1="79,-47"
+                    Point2="79,-51"
+                    Point3="83,-51" />
+                  <mssgle:LineSegment
+                    End="150.5,-51" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Fact_Table.Paths[Merge Join Output]"
+          TopLeft="433,183">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.5,40"
+              Start="0,0"
+              End="20.5,32.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16"
+                    Point2="0,20"
+                    Point3="4,20" />
+                  <mssgle:LineSegment
+                    End="16.5,20" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.5,20"
+                    Point2="20.5,20"
+                    Point3="20.5,24" />
+                  <mssgle:LineSegment
+                    End="20.5,32.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Fact_Table\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Fact_Table\OLE DB OLTP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Fact_Table\OLE DB OLAP">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
