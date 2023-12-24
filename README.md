@@ -35,4 +35,6 @@
    - Created interactive dashboards and reports to support data-driven decision-making processes.<br />
       ![image](https://github.com/Yasmeen-Shamakh/Northwind-DataWarehouse/assets/57462948/de71db34-7318-4a86-b791-473f4f02ac8d)
 
+  - &nbsp; Interact with the dashboard on [NovyPro](https://www.novypro.com/project/northwind-sales-dashboard)
+
 
