@@ -33,4 +33,6 @@
 - **Data Analysis** <br />
    - Connected  the data warehouse with **Power BI** for data analysis and visualization.<br />
    - Created interactive dashboards and reports to support data-driven decision-making processes.<br />
+      ![image](https://github.com/Yasmeen-Shamakh/Northwind-DataWarehouse/assets/57462948/de71db34-7318-4a86-b791-473f4f02ac8d)
+
 
